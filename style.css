@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+navbar{
+    display: flex;
+    background-color: #D3AB9E;
+    padding: 2.1vmin;
+}
+
+navbar ul{
+    display: flex;
+    list-style: none;
+}
+
+navbar ul li{
+    margin: 0 0 0 3vmin;
+}
+
+.logo{
+    font-weight: bold;
+}
+
+navbar ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+navbar ul li a:hover{
+    color: rgb(67, 0, 0);
+    font-weight: bold;
+}
