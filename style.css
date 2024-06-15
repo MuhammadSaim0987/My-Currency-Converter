@@ -70,3 +70,7 @@ input{
     width: 40vmin;
     padding:.1vmin 0 .1vmin .5vmin;
 }
+
+.exchange{
+    display: flex;
+}

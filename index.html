@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Currency Converter</title>
 </head>
 <body>
@@ -22,7 +23,30 @@
             
             <div class="input">
                 <p>Enter your desired amount here :</p>
-                <input type="number">
+                <input type="number" maxlength="10">
+            </div>
+
+            <div class="exchange">
+                <div class="form">
+                    <p>From:</p>
+                    <select name="From">
+                        <option value="INR">INR</option>
+                        <option value="USD" selected>USD</option>
+                        <option value="AUD">AUD</option>
+                    </select>
+                </div>
+
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                <div class="to">
+                    <p>To:</p>
+                    <select name="To">
+                        <option value="INR" selected>INR</option>
+                        <option value="USD">USD</option>
+                        <option value="AUD">AUD</option>
+                    </select>
+                </div>
+
             </div>
         </form>
     </div>
