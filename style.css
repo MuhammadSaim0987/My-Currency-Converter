@@ -14,8 +14,8 @@ navbar{
     background-color: #D3AB9E;
     padding: 2.1vmin;
     align-items: center;
-    width: 100%;
     height: 3.5vmin;
+    margin: 0 0 2vmin 0;
 }
 
 navbar ul{
@@ -24,12 +24,12 @@ navbar ul{
     align-items: center;
 }
 
-navbar ul li{
+navbar ul li pre{
     margin: 0 0 0 3vmin;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 2.3vmin;
 }
 
 .logo{
@@ -37,7 +37,7 @@ navbar ul li{
     font-weight: 650;
     font-style: italic;
     margin: 0 3vmin 0 0;
-    font-size: 1.2rem;
+    font-size: 3.2vmin;
 }
 
 navbar ul li a{
@@ -45,7 +45,7 @@ navbar ul li a{
     color: black;
 }
 
-navbar ul li a:hover{
+navbar ul li a pre:hover{
     color: rgb(67, 0, 0);
     font-weight: bold;
 }
@@ -55,6 +55,10 @@ form{
     font-weight: 400;
     font-style: normal;
     padding: 3vmin 0 0 3vmin;
+}
+
+form h1{
+    font-size:6vmin;
 }
 
 .input{
@@ -73,4 +77,58 @@ input{
 
 .exchange{
     display: flex;
+    margin: 3vmin 0 0 0;
+    font-size: 2.5vmin;
+}
+
+i{
+    margin: 0 8vmin;
+    transform: translateY(3vmin);
+    font-size: 3.1vmin;
+}
+
+select{
+    height: 3.5vmin;
+    width: 8.5vmin;
+}
+
+.btn{
+    display: flex;
+    width: 36vmin;
+    justify-content: center;
+    margin: 4.3vmin 0 0 0;
+}
+
+.btn button{
+    width: 13vmin;
+    height: 4vmin;
+    border-radius: 1.75vmin;
+    border: 0vmin solid black;
+    background-color: #D3AB9E;
+    font-size: 2vmin;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.btn button:hover{
+    transform: scale(1.025);
+}
+
+.output{
+    margin: 4.7vmin 0 0 0;
+    display: flex;
+    justify-content: center;
+    width: 36vmin;
+}
+
+footer{
+    width: 100%;
+    height: 4vmin;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D3AB9E;
 }
