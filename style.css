@@ -50,19 +50,36 @@ navbar ul li a pre:hover{
     font-weight: bold;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+}
+
 form{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    padding: 3vmin 0 0 3vmin;
+    padding: 0 0 0 3vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 8vmin 0 0 0 ;
+    background-color: #FFFBFF;
+    width: 60vmin;
+    height: 60vmin;
+    border-radius: 45px;
 }
 
 form h1{
-    font-size:6vmin;
+    font-size:5.4vmin;
+    font-weight: 600;
+    transform: translateX(1.3vmin);
 }
 
 .input{
     margin: 3vmin 0 1.3vmin 0;
+    outline: none;
+    transform: translateX(4.5vmin);
 }
 
 .input p{
@@ -71,7 +88,7 @@ form h1{
 
 input{
     height: 2.7vmin;
-    width: 40vmin;
+    width: 43.2vmin;
     padding:.1vmin 0 .1vmin .5vmin;
 }
 
@@ -79,24 +96,37 @@ input{
     display: flex;
     margin: 3vmin 0 0 0;
     font-size: 2.5vmin;
+    justify-content: space-around;
+    width: 52vmin;
+    transform: translateX(.7vmin);
 }
 
 i{
-    margin: 0 8vmin;
-    transform: translateY(3vmin);
+    transform: translateY(4.3vmin);
     font-size: 3.1vmin;
 }
 
 select{
     height: 3.5vmin;
-    width: 8.5vmin;
+    width: 8vmin;
+    outline: none;
+}
+
+.exchange img{
+    width: 5.35vmin;
+}
+
+.fromSel, .toSel{
+    display: flex;
+    align-items: center;
 }
 
 .btn{
     display: flex;
-    width: 36vmin;
+    width: 46vmin;
     justify-content: center;
     margin: 4.3vmin 0 0 0;
+    transform: translateX(4vmin);
 }
 
 .btn button{
@@ -119,7 +149,8 @@ select{
     margin: 4.7vmin 0 0 0;
     display: flex;
     justify-content: center;
-    width: 36vmin;
+    width: 47.5vmin;
+    transform: translateX(4vmin);
 }
 
 footer{
@@ -131,4 +162,5 @@ footer{
     align-items: center;
     justify-content: center;
     background-color: #D3AB9E;
+    font-size: 1.9vmin;
 }
