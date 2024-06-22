@@ -1,4 +1,5 @@
 let dropdownOpt = document.querySelectorAll(".exchange select");
+let button = document.querySelector(".btn button");
 
 for (let select of dropdownOpt) {
     for(let code in countryList){
@@ -16,9 +17,11 @@ for (let select of dropdownOpt) {
 
     select.addEventListener("change" , (event) => {
         changeFlag(event.target);
+        // let toCurr = document.querySelector("select[name='to']").value;
+        // let fromCurr = document.querySelector("select[name='from']").value;
+        // answer(fromCurr,toCurr);
     });
 }
-
 
 const changeFlag = (element) => {
     let currCode = element.value;
@@ -28,3 +31,82 @@ const changeFlag = (element) => {
     img.src = newSrc;
 };
 
+const url = 'https://currency-conversion-and-exchange-rates.p.rapidapi.com/latest?from=USD&to=EUR%2CGBP';
+const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': '38b82a4a0emsh2c3e85f48854b91p1d1480jsne5ebf28e2c59',
+		'x-rapidapi-host': 'currency-conversion-and-exchange-rates.p.rapidapi.com'
+	}
+};
+
+let answer = async (fromCurr,toCurr) => {
+    let inputValue = parseInt(document.querySelector("input").value);
+    let ansUrl = `https://currency-conversion-and-exchange-rates.p.rapidapi.com/latest?from=${fromCurr}&to=${toCurr}%2CGBP`;
+	const response = await fetch(ansUrl, options);
+	const result = await response.json();
+    let fromCurrVal = null;
+    let toCurrVal = null;
+    let fromCurrCode = fromCurr;
+    let toCurrCode = toCurr;
+    if(result.rates.hasOwnProperty(fromCurr)){
+        fromCurrVal = `${result.rates[fromCurr]}`;
+    }
+    if(result.rates.hasOwnProperty(toCurr)){
+        toCurrVal = `${result.rates[toCurr]}`;
+    }
+    statementMaker(inputValue,fromCurrCode,toCurrCode,fromCurrVal,toCurrVal);
+} 
+
+let statementMaker = (inputValue,fromCurrCode,toCurrCode,fromCurrVal,toCurrVal) => {
+    let Calcresult = ((1/fromCurrVal) * inputValue) * toCurrVal;
+    let statement = document.querySelector(".output p");
+    if(inputValue == null){
+        statement.innerText = "Enter a valid amount";
+    }
+    else{
+        statement.innerText = `${inputValue} ${fromCurrCode} = ${Calcresult.toFixed(2)} ${toCurrCode}`
+    }
+}
+
+button.addEventListener('click' , (e) => {
+    e.preventDefault();
+        let toCurr = document.querySelector("select[name='to']").value;
+        let fromCurr = document.querySelector("select[name='from']").value;
+        answer(fromCurr,toCurr);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let resultMaker = (fromCurrVal,toCurrVal,inputValue) => {
+//     let Calcresult = (inputValue * (1/fromCurrVal)) * toCurrVal;
+//     answer(Calcresult);
+// }    
+
+// Object.keys(result.rates)
+// Object.values(result.rates)
