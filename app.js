@@ -61,11 +61,11 @@ let answer = async (fromCurr,toCurr) => {
 let statementMaker = (inputValue,fromCurrCode,toCurrCode,fromCurrVal,toCurrVal) => {
     let Calcresult = ((1/fromCurrVal) * inputValue) * toCurrVal;
     let statement = document.querySelector(".output p");
-    if(inputValue == null){
-        statement.innerText = "Enter a valid amount";
+    if(inputValue > 0 && inputValue !== 0 && inputValue !== null ){
+        statement.innerText = `${inputValue} ${fromCurrCode} = ${Calcresult.toFixed(2)} ${toCurrCode}`
     }
     else{
-        statement.innerText = `${inputValue} ${fromCurrCode} = ${Calcresult.toFixed(2)} ${toCurrCode}`
+        statement.innerText = 'Enter a valid amount';
     }
 }
 

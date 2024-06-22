@@ -71,9 +71,11 @@ form{
 }
 
 form h1{
+    margin: 3vmin 0 1vmin 0;
     font-size:5.4vmin;
     font-weight: 600;
-    transform: translateX(1.3vmin);
+    transform: translate(.7vmin,-2vmin)
+
 }
 
 .input{
@@ -108,8 +110,9 @@ i{
 
 select{
     height: 3.5vmin;
-    width: 8vmin;
+    width: 7vmin;
     outline: none;
+    font-size: 1.7vmin;
 }
 
 .exchange img{
@@ -125,13 +128,13 @@ select{
     display: flex;
     width: 46vmin;
     justify-content: center;
-    margin: 4.3vmin 0 0 0;
+    margin: 5vmin 0 0 0;
     transform: translateX(4vmin);
 }
 
 .btn button{
-    width: 13vmin;
-    height: 4vmin;
+    width: 15vmin;
+    height: 5vmin;
     border-radius: 1.75vmin;
     border: 0vmin solid black;
     background-color: #D3AB9E;
@@ -142,7 +145,7 @@ select{
 }
 
 .btn button:hover{
-    transform: scale(1.025);
+    background-color: #c69889;
 }
 
 .output{
@@ -151,6 +154,8 @@ select{
     justify-content: center;
     width: 47.5vmin;
     transform: translateX(4vmin);
+    font-weight: 530;
+    font-size: 2.3vmin;
 }
 
 footer{
@@ -164,3 +169,33 @@ footer{
     background-color: #D3AB9E;
     font-size: 1.9vmin;
 }
+
+@media only screen and (width <= 480px){
+    .container{
+    height: 100vmax;
+    display: flex;
+    justify-content: center;
+    transform: translateY(25vmax);
+    }
+}
+
+@media only screen and (480px < width <= 834px){
+    .container{
+    display: flex;
+    justify-content: center;
+    transform: translateY(13vmax);    
+    }
+}
+
+@media only screen and (834px < width <=1024px){
+    .container{
+    display: flex;
+    justify-content: center;
+    transform: translateY(10vmax);    
+    }
+}
+
+.Cm{
+    margin-right: 61vmin;
+}
+
