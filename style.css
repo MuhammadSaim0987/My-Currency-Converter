@@ -6,16 +6,25 @@
 }
 
 body{
-    background-color: #ffebeb;
+    background-color: #ffe6e8;
+}
+
+.darkBody{
+    background-color: black;
 }
 
 navbar{
     display: flex;
-    background-color: #D3AB9E;
+    background-color: #e78f8e;
     padding: 2.1vmin;
     align-items: center;
     height: 3.5vmin;
     margin: 0 0 2vmin 0;
+    border-bottom: 1px solid black;
+}
+
+.darkNav{
+    background-color: #736ced;
 }
 
 navbar ul{
@@ -64,14 +73,19 @@ form{
     flex-direction: column;
     justify-content: center;
     margin: 8vmin 0 0 0 ;
-    background-color: #FFFBFF;
+    background-color: rgb(255, 222, 222);
     width: 60vmin;
     height: 60vmin;
+    border: 1px solid black;
     border-radius: 45px;
 }
 
+.darkform{
+    background-color: rgb(50, 48, 48);
+}
+
 form h1{
-    margin: 3vmin 0 1vmin 0;
+    margin: 3vmin 0 0 0;
     font-size:5.4vmin;
     font-weight: 600;
     transform: translate(.7vmin,-2vmin)
@@ -137,15 +151,19 @@ select{
     height: 5vmin;
     border-radius: 1.75vmin;
     border: 0vmin solid black;
-    background-color: #D3AB9E;
+    background-color: #e78f8e;
     font-size: 2vmin;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
 
+.darkbtn{
+    background-color: #736ced;
+}
+
 .btn button:hover{
-    background-color: #c69889;
+    background-color: #de7371;
 }
 
 .output{
@@ -166,8 +184,9 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #D3AB9E;
+    background-color: #e78f8e;
     font-size: 1.9vmin;
+    border-top: 1px solid black;
 }
 
 @media only screen and (width <= 480px){
@@ -196,6 +215,6 @@ footer{
 }
 
 .Cm{
-    margin-right: 61vmin;
+    margin-right: 82vmin;
 }
 

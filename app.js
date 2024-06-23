@@ -17,9 +17,8 @@ for (let select of dropdownOpt) {
 
     select.addEventListener("change" , (event) => {
         changeFlag(event.target);
-        // let toCurr = document.querySelector("select[name='to']").value;
-        // let fromCurr = document.querySelector("select[name='from']").value;
-        // answer(fromCurr,toCurr);
+        let outSta = document.querySelector(".output p");
+        outSta.innerText = "";
     });
 }
 
@@ -30,6 +29,8 @@ const changeFlag = (element) => {
     let img = element.parentElement.querySelector("img");
     img.src = newSrc;
 };
+
+
 
 const url = 'https://currency-conversion-and-exchange-rates.p.rapidapi.com/latest?from=USD&to=EUR%2CGBP';
 const options = {
@@ -76,37 +77,17 @@ button.addEventListener('click' , (e) => {
         answer(fromCurr,toCurr);
 })
 
+// let theme = document.querySelector("#checkboxInput");
+// theme.addEventListener("click", () => {
+//     let body = document.querySelector("body");
+//     let navbar = document.querySelector("navbar");
+//     let footer = document.querySelector("footer");
+//     let form = document.querySelector("form");
+//     let submit = document.querySelector("button");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let resultMaker = (fromCurrVal,toCurrVal,inputValue) => {
-//     let Calcresult = (inputValue * (1/fromCurrVal)) * toCurrVal;
-//     answer(Calcresult);
-// }    
-
-// Object.keys(result.rates)
-// Object.values(result.rates)
+//     body.classList.toggle("darkBody");
+//     navbar.classList.toggle("darkNav");
+//     footer.classList.toggle("darkNav");
+//     submit.classList.toggle("darkbtn");
+//     form.classList.toggle("darkform");
+// });
