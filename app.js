@@ -75,19 +75,4 @@ button.addEventListener('click' , (e) => {
         let toCurr = document.querySelector("select[name='to']").value;
         let fromCurr = document.querySelector("select[name='from']").value;
         answer(fromCurr,toCurr);
-})
-
-// let theme = document.querySelector("#checkboxInput");
-// theme.addEventListener("click", () => {
-//     let body = document.querySelector("body");
-//     let navbar = document.querySelector("navbar");
-//     let footer = document.querySelector("footer");
-//     let form = document.querySelector("form");
-//     let submit = document.querySelector("button");
-
-//     body.classList.toggle("darkBody");
-//     navbar.classList.toggle("darkNav");
-//     footer.classList.toggle("darkNav");
-//     submit.classList.toggle("darkbtn");
-//     form.classList.toggle("darkform");
-// });
+});
