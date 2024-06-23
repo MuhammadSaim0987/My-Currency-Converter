@@ -76,7 +76,10 @@ form h1{
     font-size:5.4vmin;
     font-weight: 600;
     transform: translate(.7vmin,-2vmin)
+}
 
+.something{
+    transform: translateX(1.9vmin);
 }
 
 .input{
