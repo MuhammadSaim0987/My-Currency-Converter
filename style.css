@@ -201,7 +201,7 @@ footer{
     }
 }
 
-.aboutContainer{
+.aboutContainer,.contactinfo{
     height: 100%;
     width: 100%;
     display: flex;
@@ -210,7 +210,7 @@ footer{
     margin-top: 5vmin;
 }
 
-.msg{
+.msg,.info{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -221,6 +221,26 @@ footer{
     border-radius: 45px;
     padding: 5vmin;
     background-color: #eb9e9d;
+}
+
+.contactinfo{
+    margin-top: 15vmin;
+}
+
+.info a{
+    text-decoration: none;
+    color: black;
+}
+
+.info b{
+    font-weight: 530;
+}
+
+.advise{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 10vmin;
 }
 
 .aboutContainer h1{
